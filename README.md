@@ -4,9 +4,10 @@ The implementation of the algorithm Quick Sort where we detect the execution tim
 ### Compilation and Running
 
 - Compilation: *gcc -std=c11 -O3 -lm -o quick_sort quick_sort.c*
-- Running: *./quick_sort n r*
+- Running: *time ./quick_sort n r*
   - *n*: A positive integer, the number of elements in the input array.
   - *r*: A binary value (1 or 0), to allow the random pivot or not.
+  - We use a Linux command *time* to detect the overall execution time.
 
 ### Problem description
 
