@@ -11,8 +11,8 @@ The implementation of the algorithm Quick Sort where we detect the execution tim
 
 ### Problem description
 
-Quick Sort is one of the most popular sorting algorithm.
-Many programming languages even C (function qsort()) include a built-in implementation.
+Quick Sort is one of the most popular sorting algorithms.
+Many programming languages even C (function qsort()) include a built-in implementation of the algorithm.
 
 Quick Sort takes average time O(n log n) if we assume the unordered array as input follows a uniform distribution over its all possible element permutations. However, if the distribution prefers worse cases or even the worst case, the algorithm will take O(n^2) time. The time cost is too high for practical use.
 
