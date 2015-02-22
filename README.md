@@ -36,6 +36,14 @@ Here this is my tiny implementation to experimence its correctness.
 
 ### Experiments
 
-| Number of elements int the worst-case array (*n*) | No random pivots (*r = 0*) | Random pivots (*r = 1*) |
+Without other statements, the time unit below is set *seconds*.
+
+| Number of elements int the worst-case array (*n*) | Time for no random pivots (*r = 0*) | Time for random pivots (*r = 1*) |
 | --------: | --------: | --------: |
-|1 | 0.003 | 0.003 |
+| 1 | 	0.003 | 	0.003 | 
+| 10 | 	0.003 | 	0.003 | 
+| 100 | 	0.003 | 	0.003 | 
+| 1000 | 	0.005 | 	0.003 | 
+| 10000 | 	0.134 | 	0.005 | 
+| 100000 | 	11.747 | 	0.023 | 
+| 1000000 | 	1378.347 | 	0.122 | 
