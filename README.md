@@ -33,3 +33,9 @@ we choose the pivot *uniformly at random*.
 A much deeper math derivation tells us that the simple modification can bring the expected time complexity O(n log n) even if Quick Sort always faces the worst case.
 
 Here this is my tiny implementation to experimence its correctness.
+
+### Experiments
+
+| Number of elements int the worst-case array (*n*) | No random pivots (*r = 0*) | Random pivots (*r = 1*) |
+| --------: | --------: | --------: |
+|1 | 0.003 | 0.003 |
