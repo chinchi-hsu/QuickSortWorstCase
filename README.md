@@ -32,7 +32,7 @@ we choose the pivot *uniformly at random*.
 
 A much deeper math derivation tells us that the simple modification can bring the expected time complexity O(n log n) even if Quick Sort always faces the worst case.
 
-Here this is my tiny implementation to experimence its correctness.
+Here this is my tiny implementation to show its correctness.
 
 ### Experiments
 
