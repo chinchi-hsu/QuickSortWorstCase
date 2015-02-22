@@ -19,6 +19,16 @@ For Quick Sort, the worst case occurs when each pivot chosen by the algorithm al
 
 - Array 1: *1, 2, ..., n*
 - Array 2: *n, n - 1, ..., 1*
+- 
+Hence, the problem aims at *the way of modifying Quick Sort to avoid O(n^2) time complexity for the worst case*
 
 ### Solution
 
+Randomness is introduced to solve the problem.
+The solution is simple:
+Instead of selecting the pivot with a fixed position (e.g. the lowest or highest index) of a sub-array to be sorted,
+we choose the pivot *uniformly at random*.
+
+A much deeper math derivation tells us that the simple modification can bring the expected time complexity O(n log n) even if Quick Sort always faces the worst case.
+
+Here this is my tiny implementation to experimence its correctness.
