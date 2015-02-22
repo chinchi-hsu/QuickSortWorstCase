@@ -9,6 +9,19 @@ void swap(int *value1, int *value2){
 	*value2 = temp;
 }
 
+int getRandomInteger(int smallestInteger, int largestInteger){
+	if(smallestInteger > largestInteger){
+		swap(&smallestInteger, &largestInteger);
+	}
+
+	double randomValue;
+	do{
+		randomValue = (double)rand() / RAND_MAX;
+	}while(randomValue == 1.0);
+
+	return smallestInteger + randomValue * (largestInteger - smallestInteger + 1);
+}
+
 // Range: lowestIndex <= index <= highestIndex
 // The pivot is always set the lowest index of this sub-array
 void runQuickSort(int list[], int lowestIndex, int highestIndex, bool applyRandom){
