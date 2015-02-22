@@ -9,21 +9,8 @@ void swap(int *value1, int *value2){
 	*value2 = temp;
 }
 
-// Range: smallestInteger <= integer <= largestInteger
-int getRandomInteger(int smallestInteger, int largestInteger){
-	if(smallestInteger > largestInteger){
-		swap(&smallestInteger, &largestInteger);
-	}
-	double random;
-	do{
-		random = (double)rand() / RAND_MAX;
-	}while(random == 1);
-
-	return smallestInteger + random * (largestInteger - smallestInteger + 1);
-}
-
 // Range: lowestIndex <= index <= highestIndex
-// The pivot is always set the lowest index of this list partition
+// The pivot is always set the lowest index of this sub-array
 void runQuickSort(int list[], int lowestIndex, int highestIndex, bool applyRandom){
 	if(lowestIndex >= highestIndex){
 		return;
@@ -44,7 +31,6 @@ void runQuickSort(int list[], int lowestIndex, int highestIndex, bool applyRando
 	}
 	swap(&list[lowestIndex], &list[pivotIndex]);
 
-	//printf("%d\t%d\t%d\n", lowestIndex, pivotIndex, highestIndex);
 	runQuickSort(list, lowestIndex, pivotIndex - 1, applyRandom);
 	runQuickSort(list, pivotIndex + 1, highestIndex, applyRandom);
 }
@@ -53,13 +39,6 @@ void assignDescendingList(int list[], int length){
 	for(int i = 0; i < length; i ++){
 		list[i] = length - i - 1;
 	}
-}
-
-void printList(int list[], int length){
-	for(int i = 0; i < length; i ++){
-		printf("%d\t", list[i]);
-	}
-	printf("\n");
 }
 
 bool checkSortWorking(int list[], int length){
@@ -77,7 +56,6 @@ int main(int argc, char *argv[]){
 
 	srand(time(NULL));
 	int list[length];
-	
 	assignDescendingList(list, length);
 
 	runQuickSort(list, 0, length - 1, applyRandom);
