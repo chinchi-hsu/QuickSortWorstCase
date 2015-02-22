@@ -19,7 +19,7 @@ For Quick Sort, the worst case occurs when each pivot chosen by the algorithm al
 
 - Array 1: *1, 2, ..., n*
 - Array 2: *n, n - 1, ..., 1*
-- 
+
 Hence, the problem aims at *the way of modifying Quick Sort to avoid O(n^2) time complexity for the worst case*
 
 ### Solution
