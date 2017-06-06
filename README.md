@@ -1,15 +1,23 @@
 # QuickSortWorstCase
 Detecting Quick Sort execution time in the worst case
 
-## Compilation and Running
+## Compilation
 
-- Compilation: *gcc -std=c11 -O3 -lm -o quick_sort quick_sort.c*
-- Running: *time ./quick_sort n r*
-  - *n*: A positive integer, the number of elements in the input array.
-  - *r*: A binary value (1 or 0), to allow the random pivot or not.
-  - We use a Linux command *time* to detect the overall execution time.
+```
+gcc -std=c11 -O3 -lm -o quick_sort quick_sort.c
+```
 
-## Problem description
+## Running
+
+```
+time ./quick_sort n r
+```
+
+* *n*: A positive integer, the number of elements in the input array.
+* *r*: A binary value (1 or 0), to allow the random pivot or not.
+* We use a Linux command *time* to detect the overall execution time.
+
+## Problem
 
 Quick Sort is one of the most popular sorting algorithms.
 Many programming languages even C (function qsort()) include a built-in implementation of the algorithm.
