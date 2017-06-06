@@ -1,7 +1,7 @@
 # QuickSortWorstCase
-The implementation of the algorithm Quick Sort where we detect the execution time for the worst case
+Detecting Quick Sort execution time in the worst case
 
-### Compilation and Running
+## Compilation and Running
 
 - Compilation: *gcc -std=c11 -O3 -lm -o quick_sort quick_sort.c*
 - Running: *time ./quick_sort n r*
@@ -9,7 +9,7 @@ The implementation of the algorithm Quick Sort where we detect the execution tim
   - *r*: A binary value (1 or 0), to allow the random pivot or not.
   - We use a Linux command *time* to detect the overall execution time.
 
-### Problem description
+## Problem description
 
 Quick Sort is one of the most popular sorting algorithms.
 Many programming languages even C (function qsort()) include a built-in implementation of the algorithm.
@@ -23,7 +23,7 @@ For Quick Sort, the worst case occurs when each pivot chosen by the algorithm al
 
 Hence, the problem aims at *the way of modifying Quick Sort to avoid O(n^2) time complexity for the worst case*
 
-### Solution
+## Solution
 
 Randomness is introduced to solve the problem.
 The solution is simple:
@@ -36,7 +36,7 @@ The Github repository stores my tiny implementation to show its correctness. I l
 
 http://fading-notes.blogspot.tw/2015/02/blog-post.html
 
-### Experiments
+## Experiments
 
 Without other statements, the time unit below is set *seconds*.
 
