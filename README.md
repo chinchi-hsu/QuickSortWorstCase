@@ -22,25 +22,29 @@ time ./quick_sort n r
 Quick Sort is one of the most popular sorting algorithms.
 Many programming languages even C (function qsort()) include a built-in implementation of the algorithm.
 
-Quick Sort takes average time O(n log n) if we assume the unordered array as input follows a uniform distribution over its all possible element permutations. However, if the distribution prefers worse cases or even the worst case, the algorithm will take O(n^2) time. The time cost is too high for practical use.
+Quick Sort takes average time O(n log n) if we assume the unordered array as input follows a uniform distribution over its all possible element permutations.
+However, the algorithm will take O(n^2) time in the worse case.
 
-For Quick Sort, the worst case occurs when each pivot chosen by the algorithm always partitions the array into two sub-arrays of large size difference. For example, if the pivot is always selected the element of the lowest index in the current sub-array, then the worst case of *n*-element arrays is like:
+The worst case occurs when each pivot chosen by the algorithm always partitions the array into two sub-arrays of large size difference.
+For example, if the pivot is always selected the element of the lowest index in the current sub-array, then the worst case of *n*-element arrays is like:
 
-- Array 1: *1, 2, ..., n*
-- Array 2: *n, n - 1, ..., 1*
+* Array 1: *1, 2, ..., n*
+* Array 2: *n, n - 1, ..., 1*
 
-Hence, the problem aims at *the way of modifying Quick Sort to avoid O(n^2) time complexity for the worst case*
+Hence, the problem aims *to modify Quick Sort to avoid O(n^2) time complexity in the worst case*
 
 ## Solution
 
 Randomness is introduced to solve the problem.
 The solution is simple:
-Instead of selecting the pivot with a fixed position (e.g. the lowest or highest index) of a sub-array to be sorted,
+Rather than select the pivot with a fixed position (e.g. the lowest or highest index) of a sub-array,
 we choose the pivot *uniformly at random*.
 
-A much deeper math derivation tells us that the simple modification can bring the expected time complexity O(n log n) even if Quick Sort always faces the worst case.
+A much deeper math derivations conclude that the simple modification can bring the expected time complexity O(n log n) even if Quick Sort always faces the worst case.
 
-The Github repository stores my tiny implementation to show its correctness. I learned the math derivation from a course *Randomized Algorithms* in National Taiwan University. The following link points to my personal note of the derivation (written in traditional Chinese).
+The Github repository stores my tiny implementation to show its correctness.
+I learned the math derivation from a course *Randomized Algorithms* in National Taiwan University.
+The following link records to my personal note for the derivations (in traditional Chinese).
 
 http://fading-notes.blogspot.tw/2015/02/blog-post.html
 
