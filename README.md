@@ -23,7 +23,7 @@ Quick Sort is one of the most popular sorting algorithms.
 Many programming languages even C (function qsort()) include a built-in implementation of the algorithm.
 
 Quick Sort takes average time O(n log n) if we assume the unordered array as input follows a uniform distribution over its all possible element permutations.
-However, the algorithm will take O(n^2) time in the worse case.
+However, the algorithm takes O(n^2) time in the worse case.
 
 The worst case occurs when each pivot chosen by the algorithm always partitions the array into two sub-arrays of large size difference.
 For example, if the pivot is always selected the element of the lowest index in the current sub-array, then the worst case of *n*-element arrays is like:
