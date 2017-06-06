@@ -17,7 +17,7 @@ time ./quick_sort n r
 * *r*: A binary value (1 or 0), to allow the random pivot or not.
 * We use a Linux command *time* to detect the overall execution time.
 
-## Problem
+## Problem and Goal
 
 Quick Sort is one of the most popular sorting algorithms.
 Many programming languages even C (function qsort()) include a built-in implementation of the algorithm.
@@ -31,12 +31,11 @@ For example, if the pivot is always selected the element of the lowest index in 
 * Array 1: *1, 2, ..., n*
 * Array 2: *n, n - 1, ..., 1*
 
-Hence, the problem aims *to modify Quick Sort to avoid O(n^2) time complexity in the worst case*
+Our goal aims to modify Quick Sort to avoid the worst case as much as possible.
 
 ## Solution
 
 Randomness is introduced to solve the problem.
-The solution is simple:
 Rather than select the pivot with a fixed position (e.g. the lowest or highest index) of a sub-array,
 we choose the pivot *uniformly at random*.
 
